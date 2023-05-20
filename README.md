@@ -1,5 +1,5 @@
 # Pylint-no-blank-line
-This is a pylint-plufing that ensures that there's no blank line after function definition.
+This is a pylint-plugin that ensures that there's no blank line after function definition.
 
 ## Examples
 Good:
