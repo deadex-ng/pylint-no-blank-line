@@ -2,8 +2,7 @@
 import linecache
 
 import astroid
-from pylint import interfaces
-from pylint import checkers
+from pylint import checkers, interfaces
 
 
 class NoBlankLineAfterFunctionDefChecker(checkers.BaseChecker):
