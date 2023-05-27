@@ -22,7 +22,6 @@ class TestUniqueReturnChecker(unittest.TestCase):
     ) -> None:
         node = astroid.extract_node(
             """def add(first: int, second: int) -> int:
-                   '''This is a docstring.'''
 
                    return first+second
             """)
@@ -30,7 +29,7 @@ class TestUniqueReturnChecker(unittest.TestCase):
             testutils.MessageTest(
                 msg_id='Blank-line-after-function-definition',
                 node=node,
-                line=3,
+                line=2,
                 col_offset=0,
                 end_line=1,
                 end_col_offset=8
@@ -47,15 +46,6 @@ class TestUniqueReturnChecker(unittest.TestCase):
                    '''This is a docstring.'''
                    return first+second
             """)
-        with self.checker_test_object.assertAddsMessages(
-            testutils.MessageTest(
-                msg_id='Blank-line-after-function-definition',
-                node=node,
-                line=3,
-                col_offset=0,
-                end_line=1,
-                end_col_offset=8
-            )
-        ):
+        with self.checker_test_object.assertNoMessages():
             self.checker_test_object.checker.visit_functiondef(
                 node)
