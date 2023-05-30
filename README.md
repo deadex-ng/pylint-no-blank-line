@@ -1,4 +1,6 @@
 # Pylint-no-blank-line
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
+
 This is a pylint-plugin that ensures that there's no blank line after function definition.
 
 ## Examples
