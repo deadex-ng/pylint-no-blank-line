@@ -8,8 +8,6 @@ from pylint import checkers, interfaces
 class NoBlankLineAfterFunctionDefChecker(checkers.BaseChecker):
     """Ensures that there is no blank line after function definition"""
 
-    __implements__ = (interfaces.IAstroidChecker,)
-
     name = "awesome-checker"
 
     msgs = {
