@@ -32,7 +32,7 @@ class TestUniqueReturnChecker(unittest.TestCase):
                 line=2,
                 col_offset=0,
                 end_line=1,
-                end_col_offset=8
+                end_col_offset=7
             )
         ):
             self.checker_test_object.checker.visit_functiondef(
